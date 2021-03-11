@@ -14,15 +14,14 @@ import android.widget.TextView
 const val SPLASH_SCREEN = 5000;
 
 class splash_screen : AppCompatActivity() {
-
-
-
     lateinit var topAnim: Animation
     lateinit var textView:TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
         setContentView(R.layout.activity_splash_screen)
         topAnim = AnimationUtils.loadAnimation(this,R.anim.animation)
         textView = findViewById(R.id.splash_nitnem_label)
